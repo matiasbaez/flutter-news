@@ -166,7 +166,7 @@ class _ButtonsCard extends StatelessWidget {
 
           RawMaterialButton(
             onPressed: () {},
-            fillColor: myTheme.hintColor,
+            fillColor: myTheme.colorScheme.secondary,
             shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20) ),
             child: const Icon( Icons.more_horiz ),
           ),
