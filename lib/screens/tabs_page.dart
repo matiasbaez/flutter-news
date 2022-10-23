@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:news/screens/screens.dart';
 import 'package:provider/provider.dart';
 
 class TabsPage extends StatelessWidget {
@@ -63,8 +64,9 @@ class _Pages extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       children: <Widget>[
 
-        Container(color: Colors.red),
-        Container(color: Colors.green),
+        Tab1Page(),
+
+        Tab2Page()
 
       ],
 
@@ -75,7 +77,7 @@ class _Pages extends StatelessWidget {
 class _NavigationModel with ChangeNotifier {
 
   int _currentPage = 0;
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
 
   int get currentPage => _currentPage;
 

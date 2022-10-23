@@ -1,5 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:news/widgets/news_list.dart';
+import 'package:provider/provider.dart';
+
+import 'package:news/services/services.dart';
 
 class Tab1Page extends StatelessWidget {
 
@@ -8,8 +12,14 @@ class Tab1Page extends StatelessWidget {
   const Tab1Page({ Key? key }) : super(key: key);
 
   @override
-  Widget build(BuildContext context){
-    return Container();
+  Widget build(BuildContext context) {
+
+    final newsService = Provider.of<NewsService>(context);
+    final headlines = newsService.headlines;
+
+    return Scaffold(
+      body: NewsList(news: headlines),
+    );
   }
 
 }
